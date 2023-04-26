@@ -39,7 +39,7 @@ angular.module('githubProfileViewer', ['ngRoute', 'ngMaterial'])
         vm.profile = {};
         vm.repositories = [];
         console.log(vm.username);
-        $http.get('https://api.github.com/users/' + 'iamsahilshukla')
+        $http.get('https://api.github.com/users/' + vm.username)
             .then(function (response) {
                 vm.profile = response.data;
             })
@@ -48,7 +48,7 @@ angular.module('githubProfileViewer', ['ngRoute', 'ngMaterial'])
             });
 
 
-        $http.get('https://api.github.com/users/' + 'iamsahilshukla' + '/repos')
+        $http.get('https://api.github.com/users/' + vm.username + '/repos')
             .then(function (response) {
                 vm.repositories = response.data;
             })

@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>View Profile</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body ng-app="githubProfileViewer">
-  <div ng-controller="ViewProfileCtrl as view">
+<div ng-controller="ViewProfileCtrl as view">
     <md-content>
       <md-card>
         <img ng-src="{{ view.profile.avatar_url }}" class="md-card-image" alt="{{ view.profile.name }}">
@@ -43,8 +28,3 @@
         </md-list-item>
       </md-list>
     </md-content>
-  </div>
-        <!-- <div ng-view></div> -->
-  <script src="app.js"></script>
-</body>
-</html>
