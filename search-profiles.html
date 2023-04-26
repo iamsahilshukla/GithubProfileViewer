@@ -11,26 +11,19 @@
         </md-input-container>
         <md-button class="md-raised" ng-click="search.searchProfiles()">Search</md-button>
         <md-content flex>
-            <md-list>
-                <md-list-item class="md-3-line" ng-repeat="result in
-                    search.searchResults">
-                    <img ng-src="{{result.avatar_url}}" alt="{{result.login}}"
-                        class="md-avatar">
-
-                    <div class="md-list-item-text">
-                        <a ng-href="/#!/profile/{{ result.login }}">{{ result.login}}</a>
+            <md-list style="display: flex; flex-wrap: wrap;">
+                <div class="container" ng-repeat="result in search.searchResults">
+                    <img ng-src="{{result.avatar_url}}" alt="{{result.login}}" class="md-avatar">
+                    <div class="text-container">
+                        <a ng-href="/#!/profile/{{ result.login }}">{{ result.login }}</a>
                         <h3>{{result.login}}</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Assumenda quasi itaque, labore unde, quis
-                            excepturi esse autem quas nemo quaerat eveniet.
-                            Praesentium molestias, totam molestiae dolorum
-                            placeat quasi sint adipisci?
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda quasi itaque, labore unde, quis
+                            excepturi esse autem quas nemo quaerat eveniet. Praesentium molestias, totam molestiae dolorum placeat
+                            quasi sint adipisci?
                         </p>
                     </div>
-                    <md-divider inset></md-divider>
-                </md-list-item>
-
+                </div>
             </md-list>
         </md-content>
-</div>
+    </div>

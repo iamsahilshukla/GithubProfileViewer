@@ -1,30 +1,34 @@
-<div ng-controller="ViewProfileCtrl as view">
-    <md-content>
-      <md-card>
-        <img ng-src="{{ view.profile.avatar_url }}" class="md-card-image" alt="{{ view.profile.name }}">
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">{{ view.profile.name }}</span>
-            <span class="md-subhead">{{ view.profile.bio }}</span>
-          </md-card-title-text>
-        </md-card-title>
-        <md-card-content>
-          <div class="md-subhead">{{ view.profile.location }}</div>
-          <div class="md-subhead">{{ view.profile.blog }}</div>
-          <div class="md-subhead">{{ view.profile.company }}</div>
-          <div class="md-subhead">{{ view.profile.email }}</div>
-        </md-card-content>
-        <md-card-actions layout="row" layout-align="end center">
-          <md-button href="{{ view.profile.html_url }}" target="_blank">View on GitHub</md-button>
-        </md-card-actions>
-      </md-card>
-      <md-list>
-        <md-list-item ng-repeat="repo in view.repositories">
-          <div class="md-list-item-text">
-            <h3>{{ repo.name }}</h3>
-            <p>{{ repo.description }}</p>
-          </div>
-          <md-divider></md-divider>
-        </md-list-item>
-      </md-list>
-    </md-content>
+<div ng-controller="ViewProfileCtrl as view" class="profile-container">
+  <md-content>
+    <md-card class="profile-card">
+      <img ng-src="{{ view.profile.avatar_url }}" class="md-card-image profile-image" alt="{{ view.profile.name }}">
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">{{ view.profile.name }}</span>
+          <span class="md-subhead">{{ view.profile.bio }}</span>
+        </md-card-title-text>
+      </md-card-title>
+      <md-card-content>
+        <div class="md-subhead"><i class="fas fa-link"></i> <a href="{{ view.profile.blog }}">{{ view.profile.blog }}</a></div>
+        <div class="md-subhead"><i class="fas fa-building"></i><p>company</p>{{ view.profile.company }}</div>
+        <div class="md-subhead"><i class="fas fa-envelope"></i><p>email</p> {{ view.profile.email }}</div>
+        <div class="md-subhead"><i class="fas fa-envelope"></i><p>location</p> {{ view.profile.location }}</div>
+        <div class="md-subhead"><i class="fas fa-envelope"></i> <p>followers</p>{{ view.profile.followers }}</div>
+        <div class="md-subhead"><i class="fas fa-envelope"></i> <p>public_repos</p>{{ view.profile.public_repos }}</div>
+      </md-card-content>
+      <md-card-actions layout="row" layout-align="end center">
+        <md-button href="{{ view.profile.html_url }}" target="_blank" class="view-profile-button">View on GitHub</md-button>
+      </md-card-actions>
+    </md-card>
+    <md-list class="repo-list">
+      <md-list-item ng-repeat="repo in view.repositories">
+        <div class="md-list-item-text">
+          <a href="{{ repo.html_url }}" target="_blank" class="repo-name">{{ repo.name }}</a>
+          <p class="repo-description">{{ repo.description }}</p>
+        </div>
+        <md-divider></md-divider>
+      </md-list-item>
+    </md-list>
+  </md-content>
+</div>
+
