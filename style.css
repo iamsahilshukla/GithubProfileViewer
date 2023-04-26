@@ -71,4 +71,82 @@ body {
     margin-top: 0;
     margin-bottom: 0;
   }
+
+  body {
+      background-color: #f0f0f0;
+  }
   
+  md-toolbar {
+      background-color: #333;
+      color: white;
+  }
+  
+  md-input-container {
+      margin-bottom: 10px;
+  }
+  
+  .search-button {
+      margin-top: 10px;
+  }
+  
+  .search-results {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+  }
+  
+  .search-result {
+      flex: 25%;
+      padding: 10px;
+      box-sizing: border-box;
+  }
+  
+  .search-result a {
+      display: block;
+      padding: 10px;
+      background-color: white;
+      border: 1px solid #ddd;
+      text-align: center;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+  }
+  
+  .search-result a:hover {
+    background-color: #f6f8fa;
+}
+
+.search-result img {
+    max-width: 100%;
+    height: auto;
+}
+
+.search-result .result-info {
+    padding: 16px;
+    border-top: 1px solid #e1e4e8;
+}
+
+.search-result .result-info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.search-result .result-info .result-name {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.search-result .result-info .result-username {
+    font-size: 14px;
+}
+
+.search-result .result-info .result-bio {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #586069;
+}
+.md-list-item-text{
+  
+}
